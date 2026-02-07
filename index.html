@@ -1,16 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://raw.githubusercontent.com/sojijr/valentine-website/main/public/images/favicon.png">
-    <link rel="icon" href="public/images/favicon.png" type="image/x-icon" />  
-    <title>Happy Valentine's Day</title>
-    <link rel="stylesheet" href="public/style.css">
-  </head>
-  <body>
-    <canvas id="starfield"></canvas>
-    <button id="valentinesButton">Click Me! ❤</button>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffebee;
+      font-family: "Arial", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    #main {
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #c2185b;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.25s ease;
+    }
+
+    #yesBtn {
+      background: #ec407a;
+      color: white;
+    }
+
+    #noBtn {
+      background: #b0bec5;
+      color: #333;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #880e4f;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- INTRO / STORY SECTION -->
+  <div id="main">
+    <h1 id="introText"></h1>
+    <p id="subText"></p>
+    <button id="nextBtn">Next 💌</button>
+  </div>
+
+  <!-- FINAL VALENTINE SECTION -->
+  <div id="valentineSection" style="display:none;">
+    <h1>Will you be my valentine and take me on a date? 💖</h1>
+
+    <div>
+      <button id="yesBtn">Yes 💕</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
